@@ -1,0 +1,16 @@
+<h1><%= @art.name %></h1>
+<p><%= image_tag @art.image %></p>
+<p>
+  <table>
+    <tr>
+      <td>Size</td><td><%= (@art.size.to_f/100.00) %> kB</td>
+    </tr>
+    <tr>
+      <td>Resolution</td><td> <%= @art.width %>x<%= @art.height %></td>
+    </tr>
+    <tr>
+      <td>Category</td><td> <%= @art.category %></td>
+    </tr>
+  </table>
+</p>
+<%= link_to "Delete", art_path, method: "delete", data: {confirm: "Are you sure to delete ?"} %>

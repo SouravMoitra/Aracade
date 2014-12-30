@@ -10,7 +10,10 @@
 <body>
 	<%= render "layouts/navbar" %>
 	<%= render "layouts/flash" %>
-	<%= yield %>
+  <%= render "layouts/leftpanel" %>
+  <div class="container-fluid">
+	   <%= yield %>
+  </div>
 
 </body>
 </html>

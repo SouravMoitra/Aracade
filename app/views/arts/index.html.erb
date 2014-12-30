@@ -1,0 +1,13 @@
+<h1 class="heading">All Art</h1>
+<div class="flickr_pagination"><%= will_paginate @arts %></div>
+<div class="thumb-container clearfix">
+  <% @arts.each do |art| %>
+  <div class="art-thumb-holder">
+    <%= link_to(art_path(art)) do %>
+    <%= image_tag art.image_url(:thumb), size: "300x200", alt: art.name, class: "art-thumb" %>
+    <% end %>
+    <p class="art-thumb-name"><%= art.name %></p>
+  </div>
+  <% end %>
+</div>
+<div class="flickr_pagination"><%= will_paginate @arts %></div>

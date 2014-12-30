@@ -1,0 +1,20 @@
+<div class="leftpanel" data-no-turbolink>
+  <div class="search-form">
+    <%=  form_tag("/search", method: "get") do %>
+      <%= text_field_tag 'search', nil, placeholder: 'Enter search term...', class: "search-area" %>
+      <div class="search-form-checkboxes">
+        <%= check_box_tag 'category', "satire"%>Satire
+        <br /><%= check_box_tag 'category[1]', "mono"%>Mono Hues
+        <br /><%= check_box_tag 'category[2]', "abstract"%>Abstrat
+        <br /><%= check_box_tag 'category[3]', "satirect"%>Satirect
+        <br /><%= check_box_tag 'category[4]', "lampoon"%>Lampoon
+        <br /><%= check_box_tag 'category[5]', "realistic"%>Realistic
+        <br /><%= check_box_tag 'category[6]', "photography"%>Photography
+        <br /><%= check_box_tag 'category[7]', "digital"%>Digital Art
+        <br /><%= check_box_tag 'category[8]', "arch"%>Architecture
+        <br /><%= check_box_tag 'category[9]', "sculptures"%>Sculptures
+      </div>
+      <%= submit_tag "Search", class: "search-form-btn" %>
+    <% end %>
+  </div>
+</div>

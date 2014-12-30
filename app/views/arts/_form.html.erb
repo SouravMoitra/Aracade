@@ -1,0 +1,14 @@
+<%= form_for @art, :html => {:multipart => true} do |f| %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :category %><br />
+    <%= f.select :category , options_for_select(["Painting", "Mono Hues", "Abstract", "Lampoon", "Realistic", "Photography", "Digital Art", "Realistic"]), {include_blank: true, required: true} ,{} %>
+  </p>
+  <p>
+    <%= f.file_field :image %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
